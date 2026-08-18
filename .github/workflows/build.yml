@@ -34,7 +34,7 @@ jobs:
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and push runtime
+      - name: Build and push ARM64 runtime
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -47,4 +47,4 @@ jobs:
             ${{ env.IMAGE_NAME }}:latest
           labels: |
             org.opencontainers.image.source=https://github.com/muzammilmonis/ptero
-            org.opencontainers.image.description=Pterodactyl Panel portable PHP 8.3 runtime
+            org.opencontainers.image.description=Pterodactyl Panel portable PHP 8.3 ARM64 runtime
